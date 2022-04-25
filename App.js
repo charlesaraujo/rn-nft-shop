@@ -14,7 +14,7 @@ const App = () => {
     InterBold: require("./assets/fonts/Inter-Bold.ttf"),
     InterSemiBold: require("./assets/fonts/Inter-SemiBold.ttf"),
     InterMedium: require("./assets/fonts/Inter-Medium.ttf"),
-    InteRegular: require("./assets/fonts/Inter-Regular.ttf"),
+    InterRegular: require("./assets/fonts/Inter-Regular.ttf"),
     InteLight: require("./assets/fonts/Inter-Light.ttf"),
   });
 

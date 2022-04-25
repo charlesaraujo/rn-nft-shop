@@ -73,7 +73,7 @@ export const People = () => {
         flexDirection: "row",
       }}
     >
-      {[assets.person01, assets.person02, assets.person03, assets.person04].map(
+      {[assets.person02, assets.person03, assets.person04].map(
         (imgUrl, index) => (
           <ImageCMP imgUrl={imgUrl} index={index} key={`People-${index}`} />
         )
