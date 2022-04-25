@@ -1,5 +1,3 @@
-import { StatusBar } from "expo-status-bar";
-
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { useFonts } from "expo-font";
@@ -12,7 +10,15 @@ const theme = {
   colors: { ...DefaultTheme.colors, background: "transparent" },
 };
 const App = () => {
-  const [loaded] = useFonts({});
+  const [loaded] = useFonts({
+    InterBold: require("./assets/fonts/Inter-Bold.ttf"),
+    InterSemiBold: require("./assets/fonts/Inter-SemiBold.ttf"),
+    InterMedium: require("./assets/fonts/Inter-Medium.ttf"),
+    InteRegular: require("./assets/fonts/Inter-Regular.ttf"),
+    InteLight: require("./assets/fonts/Inter-Light.ttf"),
+  });
+
+  if (!loaded) return null;
 
   return (
     <NavigationContainer theme={theme}>
@@ -23,7 +29,6 @@ const App = () => {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Details" component={Details} />
       </Stack.Navigator>
-      {/* <StatusBar style="auto" /> */}
     </NavigationContainer>
   );
 };
