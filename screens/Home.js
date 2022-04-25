@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { Text, View, SafeAreaView, FlatList } from "react-native";
+import { View, SafeAreaView, FlatList } from "react-native";
 import { FocusedStatusBar, HomeHeader, NFTCard } from "../components";
 import { COLORS, NFTData } from "../constants";
 
@@ -33,7 +33,6 @@ const Home = () => {
       </View>
     </SafeAreaView>
   );
-  // return <Text>"Home"</Text>;
 };
 
 export default Home;
