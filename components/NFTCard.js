@@ -30,7 +30,7 @@ const NFTCard = ({ data }) => {
         />
         <CircleButton img={assets.heart} right={10} top={10} />
       </View>
-      <SubInfo />
+      <SubInfo bids={data.bids} />
       <View style={{ width: "100%", padding: SIZES.font }}>
         <NFTTitle
           title={data.name}

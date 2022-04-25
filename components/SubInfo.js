@@ -66,18 +66,16 @@ export const ImageCMP = ({ imgUrl, index }) => {
   );
 };
 
-export const People = () => {
+export const People = ({ bids }) => {
   return (
     <View
       style={{
         flexDirection: "row",
       }}
     >
-      {[assets.person02, assets.person03, assets.person04].map(
-        (imgUrl, index) => (
-          <ImageCMP imgUrl={imgUrl} index={index} key={`People-${index}`} />
-        )
-      )}
+      {bids?.map((bid, index) => (
+        <ImageCMP imgUrl={bid.image} key={index} index={index} />
+      ))}
     </View>
   );
 };
@@ -118,7 +116,7 @@ export const EndDate = () => {
   );
 };
 
-export const SubInfo = () => {
+export const SubInfo = ({ bids }) => {
   return (
     <View
       style={{
@@ -129,7 +127,7 @@ export const SubInfo = () => {
         justifyContent: "space-between",
       }}
     >
-      <People />
+      <People bids={bids} />
       <EndDate />
     </View>
   );
